@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to create a new topic
   const createTopic = async (title, description) => {
     try {
-      const response = await fetch("http://localhost:3000/topics/", {
+      const response = await fetch("https://snap-z-be.vercel.app/topics/", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to display topics as a list
   const displayTopics = async () => {
     try {
-      const response = await fetch("http://localhost:3000/topics/topiclist/", {
+      const response = await fetch("https://snap-z-be.vercel.app/topics/topiclist/", {
         method: "GET",
         mode: "cors",
         headers: {

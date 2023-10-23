@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Function to display the data for Topic-wise last post
   const fetchData = async () => {
     try {
-      const URL = "http://localhost:3000/dashboard/lastTopicPosts";
+      const URL = "https://snap-z-be.vercel.app/dashboard/lastTopicPosts";
       const response = await fetch(URL, {
         method: "GET",
         mode: "cors",

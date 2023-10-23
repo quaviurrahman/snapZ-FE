@@ -6,7 +6,7 @@ const topicsListDropdown = document.getElementById("topics-list-dropdown");
 // Function to display topics in a dropdown
 const displayTopicsDropdown = async () => {
     try {
-      const response = await fetch("http://localhost:3000/topics/topiclist/",{
+      const response = await fetch("https://snap-z-be.vercel.app/topics/topiclist/",{
       method: "GET",
       mode: "cors",
       headers: {
@@ -31,7 +31,7 @@ const displayTopicsDropdown = async () => {
 // Function to create a new post
     const createPost = async (topicID, text) => {
         try {
-          const URL = "http://localhost:3000/posts/" + topicID        
+          const URL = "https://snap-z-be.vercel.app/posts/" + topicID        
           const response = await fetch(URL, {
             method: "POST",
             mode:"cors",
