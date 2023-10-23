@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>snapZ - Professional Webpage</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li class="navitem"><a href="./index.html">Home</a></li>
+        <li class="navitem"><a href="./topic.html">Topics</a></li>
+        <li class="navitem"><a href="./post.html">Post</a></li>
+        <li class="navitem"><a href="./dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="topic-section">
+      <h2>Create a New Topic</h2>
+      <form id="create-topic-form">
+        <input type="text" id="topic-title" placeholder="Topic Title" required>
+        <textarea id="topic-description" placeholder="Topic Description"></textarea>
+        <button type="submit">Create Topic</button>
+      </form>
+    </section>
+
+    <section class="topic-section">
+      <h2>Topics</h2>
+      <ul id="topics-list"></ul>
+    </section>
+  </main>
+
+  <script src="script-topic.js"></script>
+</body>
+</html>

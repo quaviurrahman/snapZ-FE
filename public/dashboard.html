@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>snapZ - Professional Webpage</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li class="navitem"><a href="./index.html">Home</a></li>
+        <li class="navitem"><a href="./topic.html">Topics</a></li>
+        <li class="navitem"><a href="./post.html">Post</a></li>
+        <li class="navitem"><a href="./dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="topic-section">
+      <h2>Topic-Wise Latest Posts</h2>
+
+      <!-- Display table for last posts in topics -->
+      <div id="table-container">
+        <table id="last-posts-table">
+          <thead>
+            <tr>
+              <th>Topic Title</th>
+              <th>Last Post Text</th>
+              <th>Created Date</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script-dashboard.js"></script>
+</body>
+</html>
