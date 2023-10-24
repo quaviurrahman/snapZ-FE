@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           'Access-Control-Allow-Headers':'application/json',
         },
       });
-      const data = await response;
+      const data = await response.json();
       console.log(data);
       return data;
     } catch (error) {
