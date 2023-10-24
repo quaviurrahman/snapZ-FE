@@ -8,7 +8,6 @@ const displayTopicsDropdown = async () => {
     try {
       const response = await fetch("https://snap-z-be.vercel.app/topics/topiclist/",{
       method: "GET",
-      mode: "no-cors",
       headers: {
           "Content-Type": "application/json",
         },
@@ -34,7 +33,6 @@ const displayTopicsDropdown = async () => {
           const URL = "https://snap-z-be.vercel.app/posts/" + topicID        
           const response = await fetch(URL, {
             method: "POST",
-            mode:"no-cors",
             headers: {
               "Content-Type": "application/json",
             },
