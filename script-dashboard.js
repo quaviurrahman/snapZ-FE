@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       const URL = "https://snap-z-be.vercel.app/dashboard/lastTopicPosts";
       const response = await fetch(URL, {
         method: "GET",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://snap-z-be.vercel.app",
         },
       });
       const data = await response.json();
