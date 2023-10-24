@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          'Access-Control-Allow-Credentials' : true,
+          'Access-Control-Allow-Origin':'*',
+          'Access-Control-Allow-Methods':'GET',
+          'Access-Control-Allow-Headers':'application/json',
         },
       });
       const data = await response.json();
