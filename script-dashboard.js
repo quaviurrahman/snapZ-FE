@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "https://snap-z-be.vercel.app",
+          "Access-Control-Allow-Origin": "*",
         },
       });
       const data = await response.json();
