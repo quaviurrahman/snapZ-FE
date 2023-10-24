@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch("https://snap-z-be.vercel.app/topics/", {
         method: "POST",
-        mode: "cors",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch("https://snap-z-be.vercel.app/topics/topiclist/", {
         method: "GET",
-        mode: "cors",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
