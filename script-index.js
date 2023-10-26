@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     async function registerUser(username, password, email) {
       try {
-        const response = await fetch("/register", {
+        const response = await fetch("https://snap-z-be.vercel.app/auth/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     async function verifyUser(email, otpCode, company = null) {
       try {
-        const response = await fetch("/verify", {
+        const response = await fetch("https://snap-z-be.vercel.app/auth/verify", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -68,4 +68,53 @@ document.addEventListener("DOMContentLoaded", () => {
         throw error;
       }
     }
+
+
+  // Function to log in a user
+  const loginUser = async (username, password) => {
+    try {
+      const response = await fetch("https://snap-z-be.vercel.app/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await response.json();
+      if (data.token) {
+        // Save the JWT token in local storage for future API requests
+        localStorage.setItem("token", data.token);
+        return true;
+      } else {
+        return false;
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+      return false;
+    }
+  };
+
+  userRegisterForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("register-username").value;
+    const password = document.getElementById("register-password").value;
+    const registered = await registerUser(username, password);
+    if (registered) {
+      // Handle successful registration, e.g., show a success message
+    }
   });
+
+  userLoginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("login-username").value;
+    const password = document.getElementById("login-password").value;
+    const loggedIn = await loginUser(username, password);
+    if (loggedIn) {
+      // Handle successful login, e.g., redirect to a user dashboard
+    }
+  });
+  });
+
+
+
+  
