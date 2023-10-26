@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const userRegisterForm = document.getElementById("user-login-form");
+    const userLoginForm = document.getElementById("user-login-form");
   
   // Function to log in a user
   const loginUser = async (username, password) => {
