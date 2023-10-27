@@ -71,8 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     userRegisterForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const username = document.getElementById("login-username").value;
-        const password = document.getElementById("login-password").value;
+        const username = document.getElementById("register-username").value;
+        const password = document.getElementById("register-password").value;
+        const email = document.getElementById("register-email").value;
+
         const registered = await registerUser(username, password);
         if (registered) {
           // Handle successful registration, e.g., show a success message
