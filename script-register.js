@@ -68,18 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         throw error;
       }
     }
-
-    userRegisterForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const username = document.getElementById("register-username").value;
-        const password = document.getElementById("register-password").value;
-        const email = document.getElementById("register-email").value;
-
-        const registered = await registerUser(username, password);
-        if (registered) {
-          // Handle successful registration, e.g., show a success message
-        }
-      });
   });
 
 
