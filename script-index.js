@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to log in a user
   const loginUser = async (username, password) => {
     try {
-      const response = await fetch("https://snap-z-be.vercel.app/auth/login", {
+      const response = await fetch("https://snap-z-be.vercel.app/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

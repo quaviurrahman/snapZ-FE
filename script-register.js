@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     async function registerUser(username, password, email) {
       try {
-        const response = await fetch("https://snap-z-be.vercel.app/auth/register", {
+        const response = await fetch("https://snap-z-be.vercel.app/user/register", {
           method: "POST",
           mode : "no-cors",
           headers: {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     async function verifyUser(email, otpCode, company = null) {
       try {
-        const response = await fetch("https://snap-z-be.vercel.app/auth/verify", {
+        const response = await fetch("https://snap-z-be.vercel.app/user/verify", {
           method: "POST",
           mode: "no-cors",
           headers: {
