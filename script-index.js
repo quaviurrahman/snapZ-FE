@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch("https://snap-z-be.vercel.app/user/login", {
         method: "POST",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.token) {
         // Save the JWT token in local storage for future API requests
         localStorage.setItem("token", data.token);
+        console.log(token)
         return true;
       } else {
         return false;
