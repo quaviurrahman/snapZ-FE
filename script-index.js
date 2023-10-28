@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.token) {
         // Save the JWT token in local storage for future API requests
         localStorage.setItem("token", data.token);
-        console.log(token)
+        console.log(data.token)
         return true;
       } else {
         return false;
