@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error logging in:", error);
       return false;
     }
-  };
-
+  }
 
   userLoginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -37,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "./dashboard.html";
     }
   });
-  });
+  }
+);
 
 
 
