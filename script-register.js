@@ -8,38 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("register-email").value;
   
       // Perform the registration process by making a POST request to your backend
-      registerUser(username, password, email)
-        .then((response) => {
+      const response = await registerUser(username, password, email)
           if (response.promptCompany) {
             const company = prompt("Enter your company name:");
-            verifyUser(email, response.otpCode, company)
-              .then((verificationResponse) => {
+            const verificationResponse = await verifyUser(email, response.otpCode, company)
                 if (verificationResponse) {
                   console.log("Registration successful");
                 }
-              })
-              .catch((error) => {
-                console.error("Error during verification:", error);
-              });
-          } else {
+              }
+           else {
             const otpCode = prompt("Enter the OTP code sent to your email:");
-            verifyUser(email, otpCode)
-              .then((verificationResponse) => {
+            const verificationResponse = await verifyUser(email, otpCode)
                 if (verificationResponse) {
                   console.log("Registration successful");
                 }
-              })
-              .catch((error) => {
-                console.error("Error during verification:", error);
-              });
-          }
-        })
-        .catch((error) => {
-          console.error("Error during registration:", error);
-        });
-    });
+                else {
+                  console.log(verificationResponse);
+                }
+              }
+            });
   
-    async function registerUser(username, password, email) {
+    const registerUser = async (username, password, email) => {
       try {
         const response = await fetch("https://snap-z-be.vercel.app/user/register", {
           method: "POST",
@@ -55,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    async function verifyUser(email, otpCode, company = null) {
+    const verifyUser = async (email, otpCode, company = null) => {
       try {
         const response = await fetch("https://snap-z-be.vercel.app/user/verify", {
           method: "POST",
