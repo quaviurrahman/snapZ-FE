@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch("https://snap-z-be.vercel.app/user/login", {
         method: "POST",
-        mode: "no-cors",
+        //mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
