@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Authorization":"Bearer " + localStorage.getItem('token'),
         },
         body: JSON.stringify({ title, description }),
       });
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
+          "Authorization":"Bearer " + localStorage.getItem('token'),
         },
       });
       const data = await response.json();
