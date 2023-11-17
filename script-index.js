@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("token", data.token);
         localStorage.setItem("username", data.username);
         localStorage.setItem("company", data.company);
-        console.log(data.token)
         return true;
       } else {
         return false;
