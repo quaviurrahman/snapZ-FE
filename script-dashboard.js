@@ -7,10 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Display the user's name and company in the navigation bar
   const navigationBar = document.getElementById("navbar");
-  navigationBar.innerHTML = `
-    <div>Welcome, ${username} (${company})!</div>
-    <!-- Other navigation items -->
-  `;
+  navigationBar.innerHTML = '<div>Welcome, ${username} (${company})!</div><!-- Other navigation items -->';
 
   // Function to display the data for Topic-wise last post
   const fetchData = async () => {
