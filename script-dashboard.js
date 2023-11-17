@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const tableContainer = document.getElementById("table-container");
   const tableBody = document.getElementById("table-body");
+    // Retrieve user details from local storage
+    const username = localStorage.getItem("username");
+    const company = localStorage.getItem("company");
+
+    // Display the user's name and company in the navigation bar
+  const navigationBar = document.getElementById("navbar");
+  navigationBar.innerHTML = `
+    <div>Welcome, ${username} (${company})!</div>
+    <!-- Other navigation items -->
+  `;
 
   // Function to display the data for Topic-wise last post
   const fetchData = async () => {
