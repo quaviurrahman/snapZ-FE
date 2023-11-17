@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById("login-password").value;
     const loggedIn = await loginUser(username, password);
     if (loggedIn) {
-      window.location.href = "./dashboard.html";
+      window.location.href = "./homepage.html";
     }
   });
   }
