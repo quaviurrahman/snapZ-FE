@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const company = localStorage.getItem('company');
 
     // Display the user's name and company in the navigation bar
-  const navigationBar = document.getElementById("navbar");
-  navigationBar.innerHTML = '<div>You are logged in as ${username}, (${company})!</div>';
+  // Display the user's name and company in the specified HTML elements
+  document.getElementById("usernameDisplay").innerHTML = username;
+  document.getElementById("companyDisplay").innerHTML = company;
 
   // Function to display the data for Topic-wise last post
   const fetchData = async () => {
