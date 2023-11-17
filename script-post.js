@@ -2,7 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const postDetails = document.getElementById("post-details");
 const createPostForm = document.getElementById("create-post-form");
 const topicsListDropdown = document.getElementById("topics-list-dropdown");
+    // Retrieve user details from local storage
+    const username = localStorage.getItem('username');
+    const company = localStorage.getItem('company');
 
+  // Display the user's name and company in the specified HTML elements
+  document.getElementById("usernameDisplay").innerHTML = username;
+  document.getElementById("companyDisplay").innerHTML = company;
+  
 // Function to display topics in a dropdown
 const displayTopicsDropdown = async () => {
     try {
