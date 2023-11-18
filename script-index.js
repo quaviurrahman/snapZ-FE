@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const loggedIn = await loginUser(username, password);
     if (loggedIn) {
       window.location.href = "./homepage.html";
+    } else {
+      window.location.href = "./index.html"
     }
   });
   }
