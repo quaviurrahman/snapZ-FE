@@ -36,9 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loggedIn) {
       window.location.href = "./homepage.html";
     } else {
-      window.location.href = "./index.html"
+      window.location.href = "./index.html";
     }
   });
+
+  userLoginForm.addEventListener("register",async (e) => {
+    e.preventDefault();
+    window.location.href = "./register.html";
+  })
+
   }
 );
 
