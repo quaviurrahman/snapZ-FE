@@ -19,7 +19,7 @@ const topicsListDropdown = document.getElementById("topics-list-dropdown");
      // Call your logout function when the logout button is clicked
      logoutUser();
    });
-   
+
 // Function to display topics in a dropdown
 const displayTopicsDropdown = async () => {
     try {
@@ -81,6 +81,19 @@ createPostForm.addEventListener("submit", async (e) => {
         console.log("Error creating Post due to:",error)
     }
   });
+  
+  // Your logout function to clear user details and perform logout actions
+  const logoutUser = async () => {
+    try {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    localStorage.removeItem("company");
+    // Redirect to the login page or perform any other necessary action
+    window.location.href = "/index.html";
+    } catch(error) {
+      console.log(error)
+    }
+  }
 
 displayTopicsDropdown();
 });

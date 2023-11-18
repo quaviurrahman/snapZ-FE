@@ -77,6 +77,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+    // Your logout function to clear user details and perform logout actions
+const logoutUser = async () => {
+  try {
+  localStorage.removeItem("token");
+  localStorage.removeItem("username");
+  localStorage.removeItem("company");
+  // Redirect to the login page or perform any other necessary action
+  window.location.href = "/index.html";
+  } catch(error) {
+    console.log(error)
+  }
+}
+
   // Initial loading of topics
   displayTopics();
 });
