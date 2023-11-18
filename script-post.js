@@ -10,6 +10,16 @@ const topicsListDropdown = document.getElementById("topics-list-dropdown");
   document.getElementById("usernameDisplay").innerHTML = username;
   document.getElementById("companyDisplay").innerHTML = company;
   
+  const logoutButton = document.getElementById("logoutButton");
+
+  // Add a click event listener to the logout button
+   logoutButton.addEventListener("click", (event) => {
+     event.preventDefault(); // Prevent default link behavior (e.g., navigation)
+ 
+     // Call your logout function when the logout button is clicked
+     logoutUser();
+   });
+   
 // Function to display topics in a dropdown
 const displayTopicsDropdown = async () => {
     try {
